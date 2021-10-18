@@ -1,12 +1,11 @@
 package com.example.experiment2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,7 +16,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int flag = 0;//0表示输入的为第一个数，1表示输入的为第二个数，2表示已经计算出结果，需要重置输入框的数据
     boolean judgeDot1 = false, judgeDot2 = false;//false表示两个数字都没有小数点，true表示有小数点
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -61,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         equ.setOnClickListener(this);
     }
 
-    @Override
     public void onClick(View v) {
         if (flag == 2) {
             result_et.setText("");
@@ -162,11 +159,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void inputDigit(String digit) {
         if (flag == 0) {
             opt_num1 += digit;
-            result_et.setText(result_et.getText().toString() + digit);
         } else {
             opt_num2 += digit;
-            result_et.setText(result_et.getText().toString() + digit);
         }
+        result_et.setText(result_et.getText().toString() + digit);
     }
 
     /**
@@ -180,25 +176,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             switch (opt) {
                 case "+":
                     result_et.setText(String.valueOf(Float.parseFloat(opt_num1) + Float.parseFloat(opt_num2)));
-                    opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
                     break;
                 case "-":
                     result_et.setText(String.valueOf(Float.parseFloat(opt_num1) - Float.parseFloat(opt_num2)));
-                    opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
                     break;
                 case "*":
                     result_et.setText(String.valueOf(Float.parseFloat(opt_num1) * Float.parseFloat(opt_num2)));
-                    opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
                     break;
                 case "/":
                     result_et.setText(String.valueOf(Float.parseFloat(opt_num1) / Float.parseFloat(opt_num2)));
-                    opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
                     break;
                 default:
                     result_et.setText("计算错误");
-                    opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
                     break;
             }
+            opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
         }
     }
 }

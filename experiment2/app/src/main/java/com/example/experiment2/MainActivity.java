@@ -127,7 +127,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operation("/");
                 break;
             case R.id.equ:
-                flag = 0;
                 equalsNum();
                 break;
             default:
@@ -171,7 +170,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void equalsNum() {
         if (opt_num1.equals("") || opt_num2.equals("")) {
             result_et.setText("输入错误，请重新输入");
-            opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
         } else {
             switch (opt) {
                 case "+":
@@ -190,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     result_et.setText("计算错误");
                     break;
             }
-            opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
         }
+        opt_num1 = "";opt_num2 = "";opt = "";flag = 2;judgeDot1 = false;judgeDot2 = false;
     }
 }

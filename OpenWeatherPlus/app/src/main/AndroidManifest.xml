@@ -49,7 +49,7 @@
         <!-- 设置key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="9656fca1e4cef43a19082b4f37b600bb" />
+            android:value="ef291ed46e4d4209fb9bb882875a4d6d" />
 
         <service android:name="com.amap.api.location.APSService" />
         <service
@@ -64,5 +64,4 @@
         <activity android:name=".view.activity.BaseActivity" />
         <activity android:name=".view.activity.SearchActivity" />
     </application>
-
 </manifest>

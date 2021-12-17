@@ -10,17 +10,16 @@ import com.heweather.owp.MyApplication;
 public class ContentUtil {
 
     //用户id
-    public static final String PUBLIC_ID = "public_id";
+    public static final String PUBLIC_ID = "HE2111280948111896";
     //用户key
-    public static final String APK_KEY = "key";
+    public static final String APK_KEY = "d024f399bae4434c948215fe0439b091";
     //当前所在位置
-    public static Double NOW_LON = 116.40;
-    public static Double NOW_LAT = 39.9;
+    public static Double NOW_LON = 114.42456711743162;
+    public static Double NOW_LAT = 30.60738168748817;
 
     //当前城市
     public static String NOW_CITY_ID = SpUtils.getString(MyApplication.getContext(), "lastLocation", "CN101010100");
     public static String NOW_CITY_NAME = SpUtils.getString(MyApplication.getContext(), "nowCityName", "北京");
-
     public static boolean FIRST_OPEN = SpUtils.getBoolean(MyApplication.getContext(), "first_open", true);
 
     //应用设置里的文字

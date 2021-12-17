@@ -4,15 +4,11 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
-
 import com.heweather.owp.crash.CrashHandler;
 import com.heweather.owp.utils.ContentUtil;
-
 import org.apache.log4j.Level;
-
 import java.io.File;
 import java.util.logging.Logger;
-
 import de.mindpipe.android.logging.log4j.LogConfigurator;
 import interfaces.heweather.com.interfacesmodule.view.HeConfig;
 

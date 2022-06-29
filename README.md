@@ -1,2 +1,2 @@
-# Android_Studio_experience
-此项目是大学期间做的实验报告
+# Android移动开发实验
+此项目为大学期间做过的实验
